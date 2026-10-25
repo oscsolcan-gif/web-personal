@@ -1,11 +1,14 @@
 /* ===================ARRANQUE=============== */
 
+/* ===================MOVIL (base, sin @media)=============== */
+
 *, *::before, *::after { box-sizing: border-box; }
 body { margin: 0; font-family: "Inter", Arial, sans-serif; line-height: 1.5; }
 img  { max-width: 100%; height: auto; display: block; }
 
+nav ul { display: flex; flex-direction: column; gap: 1rem; }
 
-/* ===================MOVIL (base, sin @media)=============== */
+
 
 
 
@@ -13,8 +16,9 @@ img  { max-width: 100%; height: auto; display: block; }
 /* ===================768px=============== */
 
 @media (min-width:768px) {
-
+  nav ul { flex-direction: row; }
 }
+
 
 
 
