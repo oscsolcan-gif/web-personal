@@ -1,0 +1,35 @@
+/* ===================ARRANQUE=============== */
+
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-family: "Inter", Arial, sans-serif; line-height: 1.5; }
+img  { max-width: 100%; height: auto; display: block; }
+
+
+/* ===================MOVIL (base, sin @media)=============== */
+
+
+
+
+/* ===================768px=============== */
+
+@media (min-width:768px) {
+
+}
+
+
+
+
+/* ===================992px=============== */
+
+@media (min-width:992px) {
+
+}
+
+
+
+
+/* ===================1200px=============== */
+
+@media (min-width:1200px) {
+
+}
