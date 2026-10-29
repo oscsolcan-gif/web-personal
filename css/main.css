@@ -26,30 +26,32 @@
       padding: 2rem 0;
       }
 
-      .main-content {
-       margin: auto 0;
-       background-color: #13d523;
-      }
-
-     img {
-     width: 100%;
-     }
-
-    section {
-        border: 2px solid black;
-        padding: 10px;
-        margin: 10px 0;
-        background-color: yellow;
-      
-    }    
-      
-
-
      nav ul {
      display: flex;
      flex-direction: column;
      background-color: #8f051c;
      }
+
+
+      .main-content {
+       margin: auto 0;
+       background-color: #13d523;
+      }
+
+      img {
+     width: 100%;
+      }
+
+      section {
+        border: 2px solid black;
+        padding: 10px;
+        margin: 10px 0;
+        background-color: yellow;      
+      }    
+      
+
+
+     
 
 
   
