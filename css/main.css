@@ -57,8 +57,9 @@
          text-align: center;
          }
 
-
-  
+        nav a {
+        color: white;
+        }
 
 
 
@@ -76,19 +77,16 @@
    justify-content: center;
    }
    nav li { flex: 1 1 100px; }
+
+     main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  section {
+    flex: 1 1 40%;
+    margin: 5px;
+  }
 }
-
-
-  
-
-
-
-
-
-
-
-
-
 
 
 
