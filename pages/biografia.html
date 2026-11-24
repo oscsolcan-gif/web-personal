@@ -1,67 +1,68 @@
 <!DOCTYPE html>
+<!-- Página dentro de /pages: para salir a la raíz se usa "../" en css, imágenes e Inicio -->
 <html lang="es">
 
 <head>
-
    <meta charset="UTF-8">
+   <!-- Necesario para que la web sea responsive en el móvil -->
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Biografía · Óscar Solano</title>
+   <!-- Fuente Inter de Google Fonts -->
    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+   <!-- Hoja de estilos: está una carpeta más arriba -->
    <link rel="stylesheet" href="../css/main.css">
-
 </head>
 
-
-
-    
 <body>
- 
+
+   <!-- Cabecera con el título de la página y el menú -->
    <header>
 
       <h1>Biografía</h1>
 
       <nav>
-     <ul>
-       <li><a href="../index.html">Inicio</a></li>
-        <li> <a href="biografia.html">Biografía</a></li>
-        <li> <a href="contacto.html">Contacto</a></li>
-        <li> <a href="portfolio.html">Portfolio</a></li>
-     </ul>
-   </nav>
+         <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="biografia.html">Biografía</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+         </ul>
+      </nav>
 
-   </header> 
+   </header>
 
-<main>
+   <main>
 
-    <section id="biografia">
-        <h2>Biografía</h2>
+      <!-- Sección de biografía: foto, presentación y formación -->
+      <section id="biografia">
+         <h2>Biografía</h2>
 
          <figure>
-         <img src="../assets/images/foto.jpg" alt="Foto Óscar, con americana y con gafas, fondo claro">
+            <!-- Foto en assets/images, una carpeta más arriba (../) -->
+            <img src="../assets/images/foto.jpg" alt="Foto Óscar, con americana y con gafas, fondo claro">
          </figure>
 
-          <p>Hola soy Óscar, alumno del BOOTCAMP en Vitoria, con 20 años de experiencia en B2B industrial. Especializado en sectores como la industria en las instalaciones de calefacción, acs y af, climatización para edificación residencial, edificación terciaria, edificación dotacional y edificación industrial.</p>
-          <p>También en los sectores de la seguridad industrial, sistemas LOTO, y en el sector del gas: combustión industrial, en cuanto a equipos y sistemas que controlan y dan seguridad a la quema de gas en hornos, calderas y procesos industriales</p>
-    
-            <h3>Formación</h3>
-              <ul>
-               <li>Ingeniería Técnica Industrial, especialidad en Química Industrial</li>
-               <li>Máster en Dirección Comercial y Marketing</li>
-               <li>IA Heroes Pro - Programa Universitario en Inteligencia Artificial · Learning Heroes</li>
-               <li>Técnico especialista en Edificios y Obras. Delineante.</li>
-             </ul>
-    
-    </section>
+         <p>Hola soy Óscar, alumno del BOOTCAMP en Vitoria, con 20 años de experiencia en B2B industrial. Especializado en sectores como la industria en las instalaciones de calefacción, acs y af, climatización para edificación residencial, edificación terciaria, edificación dotacional y edificación industrial.</p>
+         <p>También en los sectores de la seguridad industrial, sistemas LOTO, y en el sector del gas: combustión industrial, en cuanto a equipos y sistemas que controlan y dan seguridad a la quema de gas en hornos, calderas y procesos industriales</p>
 
-</main>
+         <h3>Formación</h3>
+         <!-- Lista no ordenada con la formación -->
+         <ul>
+            <li>Ingeniería Técnica Industrial, especialidad en Química Industrial</li>
+            <li>Máster en Dirección Comercial y Marketing</li>
+            <li>IA Heroes Pro - Programa Universitario en Inteligencia Artificial · Learning Heroes</li>
+            <li>Técnico especialista en Edificios y Obras. Delineante.</li>
+         </ul>
 
+      </section>
 
+   </main>
 
- <footer>
-  <p>&copy; 2026 Óscar Solano</p>
-  <p><a href="contacto.html">Contacto</a></p>
- </footer>
-
+   <!-- Pie de página -->
+   <footer>
+      <p>&copy; 2026 Óscar Solano</p>
+      <p><a href="contacto.html">Contacto</a></p>
+   </footer>
 
 </body>
 

@@ -1,65 +1,68 @@
 <!DOCTYPE html>
+<!-- Página dentro de /pages: para salir a la raíz se usa "../" en css, imágenes e Inicio -->
 <html lang="es">
 
 <head>
-
    <meta charset="UTF-8">
+   <!-- Necesario para que la web sea responsive en el móvil -->
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Portfolio · Óscar Solano</title>
+   <!-- Fuente Inter de Google Fonts -->
    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+   <!-- Hoja de estilos: está una carpeta más arriba -->
    <link rel="stylesheet" href="../css/main.css">
-
 </head>
 
 <body>
-   
-    
+
+   <!-- Cabecera con el título de la página y el menú -->
    <header>
 
       <h1>Portfolio</h1>
 
       <nav>
-     <ul>
-    <li><a href="../index.html">Inicio</a></li>
-        <li> <a href="biografia.html">Biografía</a></li>
-        <li> <a href="contacto.html">Contacto</a></li>
-        <li> <a href="portfolio.html">Portfolio</a></li>
-     </ul>
-   </nav>
+         <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="biografia.html">Biografía</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+         </ul>
+      </nav>
 
-  </header>
+   </header>
 
+   <main>
 
-<main>
+      <!-- Sección del portfolio: la clase "galeria" activa en CSS el reparto
+           en columnas (Flexbox) de las dos prácticas -->
+      <section id="portfolio" class="galeria">
 
-<section id="portfolio">
+         <h2>Trabajos del curso</h2>
 
-    <h2>Trabajos del curso</h2>
+         <article>
+            <h3>Práctica de CARTA</h3>
+            <figure>
+               <img src="../assets/images/carta.png" alt="Foto de la practica de la carta, fondo blanco, con remite">
+            </figure>
+         </article>
 
-    <article>
-      <h3>Práctica de CARTA</h3>
-       <figure>
-         <img src="../assets/images/carta.png" alt="Foto de la practica de la carta, fondo blanco, con remite">
-       </figure>
-    </article>
+         <article>
+            <h3>Práctica de SERVICIOS</h3>
+            <figure>
+               <img src="../assets/images/servicios.png" alt="Foto de la práctica de servicios, todo en cuadros y bien delimitado, desarrollo web y diseño gráfico">
+            </figure>
+         </article>
 
-    <article>
-      <h3>Práctica de SERVICIOS</h3>
-       <figure>
-         <img src="../assets/images/servicios.png" alt="Foto de la práctica de servicios, todo en cuadros y bien delimitado, desarrollo web y diseño gráSfico">
-       </figure>
-    </article>
+      </section>
 
-</section>
+   </main>
 
-</main>
-
-<footer>
-  <p>&copy; 2026 Óscar Solano</p>
-  <p><a href="contacto.html">Contacto</a></p>
- </footer>
+   <!-- Pie de página -->
+   <footer>
+      <p>&copy; 2026 Óscar Solano</p>
+      <p><a href="contacto.html">Contacto</a></p>
+   </footer>
 
 </body>
- 
 
 </html>

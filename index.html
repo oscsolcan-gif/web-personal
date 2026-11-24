@@ -1,71 +1,70 @@
 <!DOCTYPE html>
+<!-- Portada de la web personal. Está en la raíz, por eso las rutas
+     van directas (css/main.css, pages/..., assets/...) sin "../" -->
 <html lang="es">
 
 <head>
-   
+   <!-- Codificación para que salgan bien tildes y la ñ -->
    <meta charset="UTF-8">
+   <!-- Necesario para que la web sea responsive en el móvil -->
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Inicio · Óscar Solano</title>
+   <!-- Fuente Inter de Google Fonts -->
    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+   <!-- Mi hoja de estilos -->
    <link rel="stylesheet" href="css/main.css">
-
 </head>
 
 <body>
- 
+
+   <!-- Cabecera con el nombre y el menú de navegación -->
    <header>
 
       <h1>Óscar Solano</h1>
 
       <nav>
-     <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li> <a href="pages/biografia.html">Biografía</a></li>
-        <li> <a href="pages/contacto.html">Contacto</a></li>
-        <li> <a href="pages/portfolio.html">Portfolio</a></li>
-     </ul>
-   </nav>
+         <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="pages/biografia.html">Biografía</a></li>
+            <li><a href="pages/contacto.html">Contacto</a></li>
+            <li><a href="pages/portfolio.html">Portfolio</a></li>
+         </ul>
+      </nav>
 
-   </header> 
+   </header>
 
-
-
+   <!-- Contenido principal: tres secciones resumen, cada una enlaza a su página -->
    <main>
 
       <section id="biografia">
-        <h2>Biografía</h2>
-
+         <h2>Biografía</h2>
+         <figure>
+            <img src="assets/images/foto.jpg" alt="Foto Óscar, con americana y con gafas, fondo claro">
+         </figure>
+         <p>Alumno del BOOTCAMP en Vitoria, con 20 años de experiencia en B2B industrial.</p>
+         <p><a href="pages/biografia.html">Leer biografía completa</a></p>
       </section>
-
 
       <section id="contacto">
-        <h2>Contacto</h2>
-
-     </section>
-
-      <section id="portfolio">
-        <h2>Portfolio</h2>
-
+         <h2>Contacto</h2>
+         <p>¿Quieres ponerte en contacto conmigo? Escríbeme desde el formulario.</p>
+         <p><a href="pages/contacto.html">Ir al formulario</a></p>
       </section>
 
+      <section id="portfolio">
+         <h2>Portfolio</h2>
+         <p>Trabajos del curso: práctica de la carta y práctica de servicios.</p>
+         <p><a href="pages/portfolio.html">Ver portfolio</a></p>
+      </section>
 
+   </main>
 
-</main>
-
-
- <footer>
-  <p>&copy; 2026 Óscar Solano</p>
-  <p><a href="pages/contacto.html">Contacto</a></p>
-</footer>
-
+   <!-- Pie de página con el copyright y un enlace a contacto -->
+   <footer>
+      <p>&copy; 2026 Óscar Solano</p>
+      <p><a href="pages/contacto.html">Contacto</a></p>
+   </footer>
 
 </body>
-
-
-
-
-
-
-
 
 </html>

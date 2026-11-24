@@ -1,118 +1,271 @@
+/* =====================================================
+   WEB PERSONAL · Óscar Solano
+   Hoja de estilos única para index.html y las páginas de /pages
+   Método: móvil primero (estilos base = móvil) y después
+   media queries con min-width en 768px, 992px y 1200px
+   (ver temario 1.2.11 y 1.2.13 en el repo de Héctor)
+   ===================================================== */
+
+
 /* ===================ARRANQUE=============== */
+
+/* Con border-box el padding y el borde ya cuentan dentro del ancho
+   que le damos a una caja (modelo de caja, tema 1.2.4).
+   Así un input al 100% no se sale de su contenedor. */
+* {
+  box-sizing: border-box;
+}
+
 
 /* ===================MOVIL (base, sin @media)=============== */
 
+/* Cuerpo de la página: fuente Inter (cargada desde Google Fonts en el
+   <head> de cada HTML) y Arial / sans-serif como plan B si no carga */
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #2d67dc;
+}
 
-/* Ajustes para pantallas más grandes */
+/* Cabecera y pie: mismo estilo, texto centrado en móvil */
+header,
+footer {
+  background-color: #2f0202;
+  color: white;
+  text-align: center;
+  margin: auto;
+  padding: 2rem 0;
+}
 
-  body {
+/* Quito el margen que trae el h1 por defecto para que no se
+   sume al padding de la cabecera */
+header h1 {
+  margin: 0 0 1rem 0;
+}
 
-    min-width: 80%; 
-    margin: 0;
-    padding: 20px;
-    font-family: "Inter", Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    background-color: #2d67dc;
-  
+/* Menú: lista en columna (flex-direction: column), una opción debajo
+   de otra. Quito los puntos y el sangrado por defecto de la lista. */
+nav ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #8f051c;
+}
+
+/* Cada opción del menú, en su caja con borde */
+nav li {
+  border: 2px solid black;
+  margin: 5px;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Efecto hover en la navegación (pide el enunciado 1.2.13):
+   al pasar el ratón cambia el color y se subraya, con transición suave */
+nav li {
+  transition: background-color 0.3s;
+}
+
+nav li:hover {
+  background-color: #2f0202;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Contenido principal: en móvil las secciones se apilan en una columna */
+main {
+  margin: 10px 0;
+}
+
+/* Cada sección (biografía, contacto, portfolio...) es una caja amarilla */
+section {
+  border: 2px solid black;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: yellow;
+}
+
+/* Imágenes responsivas: ocupan el ancho de su contenedor
+   y la altura se ajusta sola para no deformarse */
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+figure {
+  margin: 0 0 1rem 0;
+}
+
+/* Foto de la biografía: en móvil a todo el ancho */
+#biografia figure {
+  max-width: 100%;
+}
+
+/* ---- Formulario de contacto (pages/contacto.html) ---- */
+
+/* Etiqueta encima de cada campo, en bloque */
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Campos al 100% del ancho de la sección */
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 2px solid black;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+/* Botón de enviar con hover */
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #8f051c;
+  color: white;
+  border: 2px solid black;
+  font-family: inherit;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #2f0202;
+}
+
+/* ---- Enlace del pie y de las secciones de la portada ---- */
+footer a {
+  color: white;
+}
+
+/* Imágenes del portfolio: transición suave al pasar el ratón
+   (enunciado 1.2.13: "transición suave ... al hacer hover") */
+.galeria img {
+  transition: transform 0.3s;
+}
+
+.galeria img:hover {
+  transform: scale(1.03);
+}
+
+
+/* ===================768px (tablet)=============== */
+
+@media (min-width: 768px) {
+
+  /* El menú pasa a fila y se centra */
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
   }
 
-  
-      header, footer {
-      background-color: #2f0202;
-      color: white;
-      text-align: center;
-      margin: auto;
-      padding: 2rem 0;
-      }
+  /* Cada opción reparte el ancho disponible (flex: crece, encoge, base 100px) */
+  nav li {
+    flex: 1 1 100px;
+  }
 
-     nav ul {
-     display: flex;
-     flex-direction: column;
-     background-color: #8f051c;
-     }
-
-
-      .main-content {
-       margin: auto 0;
-       background-color: #13d523;
-      }
-
-      img {
-     width: 100%;
-      }
-
-      section {
-        border: 2px solid black;
-        padding: 10px;
-        margin: 10px 0;
-        background-color: yellow;      
-      }    
-      
-     
-         nav li {
-         border: 2px solid black;
-         margin: 5px;
-         padding: 10px;
-         text-align: center;
-         }
-
-        nav a {
-        color: white;
-        }
-
-
-
-
-
-
-
-/* ===================768px=============== */
-
-
- 
-
-  @media (min-width:768px) {
-   nav ul { flex-direction: row;
-   justify-content: center;
-   }
-   nav li { flex: 1 1 100px; }
-
-     main {
+  /* El main pasa a Flexbox: las secciones se colocan una al lado de otra
+     y bajan de línea si no caben (flex-wrap) */
+  main {
     display: flex;
     flex-wrap: wrap;
   }
+
+  /* Cada sección ocupa al menos casi la mitad: dos columnas.
+     Si solo hay una (páginas de /pages) crece y ocupa todo el ancho. */
   section {
-    flex: 1 1 25%;
+    flex: 1 1 45%;
     margin: 5px;
+  }
+
+  /* La foto de la biografía no hace falta a todo el ancho */
+  #biografia figure {
+    max-width: 300px;
+  }
+
+  /* Portfolio: las dos prácticas lado a lado dentro de su sección */
+  .galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  /* El título de la sección ocupa una fila entera */
+  .galeria h2 {
+    flex: 1 1 100%;
+    margin: 0;
+  }
+
+  .galeria article {
+    flex: 1 1 45%;
   }
 }
 
 
-
-
-
-/* ===================992px=============== */
+/* ===================992px (escritorio pequeño)=============== */
 
 @media (min-width: 992px) {
-  header, footer {
+
+  /* Cabecera y pie alineados a la izquierda y con menos alto */
+  header,
+  footer {
     text-align: left;
     padding: 1rem 2rem;
   }
+
+  /* Cabecera en fila: título a la izquierda y menú a la derecha */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header h1 {
+    margin: 0;
+  }
+
+  /* En la portada las tres secciones caben en una fila (3 columnas) */
+  section {
+    flex: 1 1 30%;
+  }
 }
 
 
+/* ===================1200px (escritorio grande)=============== */
 
+@media (min-width: 1200px) {
 
+  /* Para que el contenido no se estire demasiado, lo centro con un
+     ancho máximo de 1200px (como pide el enunciado 1.2.13 en escritorio) */
+  body {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 
-
-
-
-
-
-
-/* ===================1200px=============== */
-
-@media (min-width:1200px) {
-
+  /* Texto algo mayor en pantallas grandes */
+  body {
+    font-size: 18px;
+  }
 }
